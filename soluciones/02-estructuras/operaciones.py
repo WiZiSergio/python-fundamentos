@@ -1,8 +1,3 @@
-"""Solución - Guiado 1: Operaciones numéricas
-
-Definir a=10, b=3 y mostrar suma, resta, multiplicación y división (2 decimales).
-"""
-
 a = 10
 b = 3
 
