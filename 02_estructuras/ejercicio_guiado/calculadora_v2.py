@@ -19,37 +19,45 @@ Instrucciones:
 """
 
 # TODO 1: Pide el primer número al usuario y conviértelo a float
-# num1 = ...
+num1 = float(input("Ingresa el primer número: "))
 
 
 # TODO 2: Pide el segundo número al usuario y conviértelo a float
-# num2 = ...
+num2 = float(input("Ingresa el segundo número: "))
 
 
 # TODO 3: Pregunta qué operación desea realizar
 # Pista: input("¿Qué operación deseas realizar? (+, -, *, /): ")
-# operacion = ...
+operacion = input("¿Qué operación deseas realizar? (+, -, *, /): ")
 
 
 # TODO 4: Realiza la operación correspondiente usando if/elif/else
 # Pista: Compara la variable 'operacion' con "+", "-", "*", "/"
 #
 # if operacion == "+":
-#     resultado = num1 + num2
-# elif operacion == "-":
-#     ...
-# elif operacion == "*":
-#     ...
-# elif operacion == "/":
-#     ...
-# else:
-#     print("❌ Operación no válida")
+if operacion == "+":
+	resultado = num1 + num2
+elif operacion == "-":
+	resultado = num1 - num2
+elif operacion == "*":
+	resultado = num1 * num2
+elif operacion == "/":
+	# Manejo básico de división por cero
+	if num2 == 0:
+		print("❌ Error: división por cero.")
+		resultado = None
+	else:
+		resultado = num1 / num2
+else:
+	print("❌ Operación no válida")
+	resultado = None
 
 
 # TODO 5: Muestra el resultado usando f-strings
 # Pista: f"El resultado de {num1} {operacion} {num2} = {resultado:.2f}"
 # El :.2f muestra solo 2 decimales
-# print(f"...")
+if resultado is not None:
+	print(f"El resultado de {num1} {operacion} {num2} = {resultado:.2f}")
 
 
 # ¡Perfecto! Ahora tu calculadora puede hacer las 4 operaciones básicas
