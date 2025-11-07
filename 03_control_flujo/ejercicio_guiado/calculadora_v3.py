@@ -21,9 +21,67 @@ Instrucciones:
 6. Permite salir con la opción 5
 """
 
+"""
+Calculadora v3 - Menú interactivo con validación
+=================================================
+"""
+
 # TODO 1: Crea el bucle principal
-# while True:
-#     # Todo el código va aquí dentro
+def main():
+    while True:
+        # Menú principal
+        print("\n=== CALCULADORA ===")
+        print("1. Sumar")
+        print("2. Restar")
+        print("3. Multiplicar")
+        print("4. Dividir")
+        print("5. Salir")
+
+        # Pedir opción al usuario
+        opcion = input("\nElige una opción: ").strip()
+
+        # Salir
+        if opcion == "5":
+            print("¡Hasta pronto! 👋")
+            break
+
+        # Validar opción
+        if opcion not in {"1", "2", "3", "4"}:
+            print("❌ Opción no válida. Intenta de nuevo.")
+            continue
+
+        # Pedir números con validación
+        try:
+            num1 = float(input("Primer número: "))
+            num2 = float(input("Segundo número: "))
+        except ValueError:
+            print("❌ Entrada inválida. Debes ingresar números.")
+            continue
+
+        # Control de división por cero
+        if opcion == "4" and num2 == 0:
+            print("❌ Error: No se puede dividir por cero")
+            continue
+
+        # Realizar operación
+        if opcion == "1":
+            resultado = num1 + num2
+            simbolo = "+"
+        elif opcion == "2":
+            resultado = num1 - num2
+            simbolo = "-"
+        elif opcion == "3":
+            resultado = num1 * num2
+            simbolo = "*"
+        else:  # opcion == "4"
+            resultado = num1 / num2
+            simbolo = "/"
+
+        # Mostrar resultado
+        print(f"✅ {num1} {simbolo} {num2} = {resultado:.2f}")
+        
+if __name__ == "__main__":
+    main()
 
 
     # TODO 2: Muestra el menú
