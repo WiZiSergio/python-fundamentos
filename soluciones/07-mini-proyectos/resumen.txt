@@ -1,0 +1,14 @@
+=== RESUMEN DE LOGS ===
+
+EVENTOS POR TIPO:
+ERROR: 1
+INFO: 3
+WARNING: 2
+
+EVENTOS POR FECHA:
+2025-11-07: 3
+2025-11-08: 3
+
+Total de eventos: 6
+Días diferentes: 2
+Promedio de eventos por día: 3.00

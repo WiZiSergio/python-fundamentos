@@ -1,0 +1,13 @@
+{
+  "tickets": {
+    "1": {
+      "id": 1,
+      "titulo": "Hola",
+      "descripcion": "hola",
+      "estado": "cerrado",
+      "fecha_creacion": "2025-11-07 12:59:01",
+      "fecha_cierre": "2025-11-07 12:59:22"
+    }
+  },
+  "siguiente_id": 2
+}

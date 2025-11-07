@@ -1,0 +1,25 @@
+{
+  "total_gatos": 8,
+  "peso": {
+    "media": 4.675,
+    "mediana": 4.65
+  },
+  "edad": {
+    "media": 3.25,
+    "mediana": 3.0
+  },
+  "top_pesados": [
+    [
+      6.1,
+      4
+    ],
+    [
+      5.5,
+      3
+    ],
+    [
+      5.2,
+      5
+    ]
+  ]
+}
